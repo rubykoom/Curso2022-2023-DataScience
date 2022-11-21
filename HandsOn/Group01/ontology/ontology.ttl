@@ -332,6 +332,12 @@ foaf:name a owl:ObjectProperty ;
         sch:School ;
     rdfs:range xsd:string .
 
+### https://schema.org/faxNumber
+sce:faxNumber a owl:ObjectProperty;
+	rdfs:label "has fax number";
+	rdfs:domain lib:ContactInfo,
+		sch:ContactInfo ;
+	rdfs:range sce:text .
 
 #################################################################
 #    Classes
