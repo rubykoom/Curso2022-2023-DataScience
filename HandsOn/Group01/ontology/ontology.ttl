@@ -15,23 +15,23 @@
 #################################################################
 
 
-###  https://www.biblioescuela.educamadrid.org/ontologies/Library#closeAt
-lib:closeAt a owl:ObjectProperty ;
-    rdfs:label "close at" ;
-    rdfs:domain lib:openingHours ;
+###  https://www.biblioescuela.educamadrid.org/ontologies/Library#openDays
+lib:openDays a owl:ObjectProperty ;
+    rdfs:label "open days" ;
+    rdfs:domain lib:OpeningHours ;
     rdfs:range date:Hour .
 
 
 ###  https://www.biblioescuela.educamadrid.org/ontologies/Building#closeDays
 bldg:closeDays a owl:ObjectProperty ;
     rdfs:label "close days" ;
-    rdfs:domain bldg:openingHours ;
+    rdfs:domain bldg:OpeningHours ;
     rdfs:range xsd:string .
 
 ###  https://www.biblioescuela.educamadrid.org/ontologies/Library#comments
 lib:comments a owl:ObjectProperty ;
     rdfs:label "comments" ;
-    rdfs:domain lib:openingHours ;
+    rdfs:domain lib:OpeningHours ;
     rdfs:range xsd:string .
 
 
@@ -178,7 +178,7 @@ bldg:hasRailways a owl:ObjectProperty ;
 bldg:hasTimetable a owl:ObjectProperty ;
     rdfs:label "has timetable" ;
     rdfs:domain bldg:Library ;
-    rdfs:range lib:openingHours .
+    rdfs:range lib:OpeningHours .
 
 
 ###  https://www.biblioescuela.educamadrid.org/ontologies/Building#hasTransport
@@ -212,11 +212,11 @@ bldg:hasZipCode a owl:ObjectProperty ;
 ###  https://www.biblioescuela.educamadrid.org/ontologies/Building#openAt
 lib:openAt a owl:ObjectProperty ;
     rdfs:label "open at" ;
-    rdfs:domain lib:openingHours ;
+    rdfs:domain lib:OpeningHours ;
     rdfs:range date:Hour .
 
 
-###  https://www.biblioescuela.educamadrid.org/ontologies/School#EducationType
+###  https://www.biblioescuela.educamadrid.org/ontologies/School#educationType
 sch:educationType a owl:ObjectProperty ;
     rdfs:label "education type" ;
     rdfs:domain sch:School ;
@@ -420,8 +420,8 @@ bldg:Transport a owl:Class ;
     rdfs:label "Transport" .
 
 
-### https://www.biblioescuela.educamadrid.org/ontologies/Library#openingHours
-lib:openingHours a owl:Class ;
+### https://www.biblioescuela.educamadrid.org/ontologies/Library#OpeningHours
+lib:OpeningHours a owl:Class ;
     rdfs:label "opening Hours" .
 
 
